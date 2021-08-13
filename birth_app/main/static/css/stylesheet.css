@@ -1,0 +1,35 @@
+#insta {
+    padding-top: 20%;
+    font-family: sans-serif;
+    
+}
+#click {
+    text-align: center;
+}
+#bhome {
+    background-color: black;
+}
+#h1h {
+    padding-top: 20%;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+#tindex {
+    color: white;
+    padding-top: 15%;
+    text-align: center;
+}
+
+#iform {
+    text-align: center;
+    padding-top: 1%;
+    color: white;   
+}
+
+#ibutton {
+    background-color:black;
+    border-color: white;
+    color: white;
+}

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Is your birthday!!</title>
+    </head>
+    <body>
+        {% if day and month %}
+           <h1>PARABÉNS</h1>
+        {% else %}
+            <h1>{{ day }}, {{ month }}</h1>
+        {% endif %}    
+    </body>
+</html>

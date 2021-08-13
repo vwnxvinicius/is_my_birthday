@@ -1,24 +1,19 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <title>Your birthday</title>
         <link rel="stylesheet" href="{% static 'styles.css' %}">
-        <style>
-            div {
-                margin-top: 10%;
-            }
-        </style>
-
-
+        <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
     </head>
-    <body>
-        <div >
-            <h1>Insira aqui sua data de aniversário!!</h1>
-        </div>
-        <form action="" method="POST">
-            
+    <body style="background-color: black;">
+        <h1 id="tindex">Insira aqui sua data de aniversário!!</h1>
+        
+        <form id="iform" action="birth" method="POST">  
+        {% csrf_token %}
+        {{ form }}
+        <input id="ibutton" type="Submit" >  
         </form>
-    </body>
+        </body>
 </html>
+ 
