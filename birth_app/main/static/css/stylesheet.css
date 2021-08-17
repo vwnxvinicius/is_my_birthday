@@ -1,22 +1,9 @@
-#insta {
-    padding-top: 20%;
-    font-family: sans-serif;
-    
-}
-#click {
-    text-align: center;
-}
-#bhome {
-    background-color: black;
-}
-#h1h {
-    padding-top: 20%;
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
+div {
+    background-color: red;
 }
 
 #tindex {
+    font-family: sans-serif;
     color: white;
     padding-top: 15%;
     text-align: center;

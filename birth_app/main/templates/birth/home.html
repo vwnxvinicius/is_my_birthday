@@ -1,18 +1,20 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <title>Welcome</title>
+        <title>Your birthday</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
         <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">
     </head>
-    <body id="bhome">
-        <h1 id="h1h">WELCOME</h1>
-        <div id="click">
-        <a style="color: brown;" href="/birth">click here</a>
-        </div>
-        <div id="insta">
-            <a style="color: white;" href="https://www.instagram.com/invites/contact/?i=1re2csyu0vlq4&utm_content=kszz6zf">
-                Follow me on instagram</a>
-        </div>
-    </body>
+    <body style="background-color: black;">
+        <h1 id="tindex">INSIRA AQUI SUA DATA DE ANIVERSÁRIO!!</h1>
+        
+        <form id="iform" action="isbirth" method="POST">  
+            {% csrf_token %}
+            {{ form }}
+            <input id="ibutton" type="Submit" >  
+        </form>
+        </body>
 </html>
+ 

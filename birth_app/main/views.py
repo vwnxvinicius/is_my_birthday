@@ -13,9 +13,6 @@ month = str(now.month)
 
 
 
-def home(request):
-    return render(request, "birth/home.html")
-
 def result(request):
     return render(request, "birth/result.html")
 
@@ -28,21 +25,24 @@ class BirthDate(forms.Form):
     dia = forms.IntegerField( min_value=1, max_value=31)
     mes = forms.IntegerField(min_value=1, max_value=12)
 
-def index(request):
+def home(request):
     if request == "POST":
         form = BirthDate(request.POST)
         if form.is_valid():
             dia = form.cleaned_data["dia"]
             mes = form.cleaned_data["mes"]
     else:
-        return render(request, "birth/index.html",{
+        return render(request, "birth/home.html",{
         "form": BirthDate()
         })
         
-    return render(request, "birth/index.html",{
+    return render(request, "birth/home.html",{
         "form": BirthDate(),
         "day": request.POST.get("dia") == day,
         "month": request.POST.get("mes") == month,
         })
 def is_birth(request):
-    return render(request, "birth/isbirth.html")
+    return render(request, "birth/isbirth.html",{
+        "day": request.POST.get("dia") == day,
+        "month": request.POST.get("mes") == month,
+    })

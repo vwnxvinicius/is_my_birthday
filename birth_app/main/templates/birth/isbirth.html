@@ -1,13 +1,20 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Is your birthday!!</title>
-    </head>
-    <body>
-        {% if day and month %}
-           <h1>PARABÉNS</h1>
-        {% else %}
-            <h1>{{ day }}, {{ month }}</h1>
-        {% endif %}    
-    </body>
+    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">    
+    {% if day and month %}
+        <head>
+            <title>Congratulations!!</title>
+        </head>
+        <body>
+            <h1> Meus parabéns, aproveite o seu dia!!</h1>
+        </body>
+    {% else %}
+        <head>
+            <title>Oops!</title>
+        </head>
+        <body>
+            <h1>Hoje não é seu aniversário, mas aproveite o dia mesmo assim!!</h1>
+        </body>
+    {% endif %}
 </html>
