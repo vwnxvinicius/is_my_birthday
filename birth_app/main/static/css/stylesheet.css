@@ -1,12 +1,93 @@
-div {
-    background-color: red;
+body {
+background-image: url('./bolo-aniversario.png');
+background-repeat:no-repeat ;
+background-size: cover;
 }
 
-#tindex {
+body h1{
     font-family: sans-serif;
-    color: white;
-    padding-top: 15%;
+    color: black;
+    margin-top: 15%;
     text-align: center;
+    text-transform: capitalize;
+    transition: 1s;
+}
+
+body h1:hover {
+    font-family: sans-serif;
+    color: black;
+    text-transform: uppercase;
+}
+
+form label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+form #id_dia {
+    color: black;
+    background: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    transition: 0.50s;
+    text-align: center;
+}
+
+form #id_dia:focus, #id_mes:focus {
+    width: 300px;
+    border-radius: 15px 0px 15px 0px;
+    border: 4px solid rgb(73, 126, 185);
+    background-color: aliceblue;
+}
+
+
+
+form #ibutton:hover {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px 20px 10px 20px;
+    border: 2px solid rgb(73, 126, 185);
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: aliceblue;
+    color: black;
+} 
+
+form #ibutton:active {
+    height: 30px;
+    width: 150px;
+    border-radius: 10px 20px 10px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+} 
+
+
+form #id_mes {
+    color: black;
+    background: none;
+    border: 1px solid black;
+    border-radius: 15px;
+    transition: 0.50s;
+    text-align: center;
+}
+
+#ibutton {
+    top: 60%; left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: block;
+    background: none;
+    color: black;
+    border: 2px solid black;
+    border-radius: 15px;
+    height: 20px;
+    width: 100px;
+    transition: 0.25s;
 }
 
 #iform {
@@ -15,8 +96,3 @@ div {
     color: white;   
 }
 
-#ibutton {
-    background-color:black;
-    border-color: white;
-    color: white;
-}

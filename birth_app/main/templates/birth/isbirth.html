@@ -1,9 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
-    <link rel="stylesheet" href="{% static 'css/stylesheet.css' %}" type="text/css">    
+<html>    
     {% if day and month %}
         <head>
+            <link rel="stylesheet" href="{% static 'css/isbirth.css' %}">
             <title>Congratulations!!</title>
         </head>
         <body>
@@ -11,6 +11,7 @@
         </body>
     {% else %}
         <head>
+            <link rel="stylesheet" href="{% static 'css/notbirth.css' %}">
             <title>Oops!</title>
         </head>
         <body>
